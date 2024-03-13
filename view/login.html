@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Hai già un account?</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="signup-container">
+        <h1 class="signup-title">Crea il tuo account</h1>
+        <form class="signup-form" action="../public/login.php" method="POST">
+            <label for="email">Inserisci l'email</label>
+            <input type="email" name="email" id="email" required placeholder="name@example.com">
+
+            <label for="password">Inserisci la password</label>
+            <input type="password" name="password" id="password" required placeholder="Scrivila qui">
+            
+            <button type="submit">ACCEDI</button>
+        </form>
+        <div class="login-link">
+            Non hai ancora un profilo? <a href="register.php">Registrati</a>
+        </div>
+    </div>
+</body>
+</html>
+
