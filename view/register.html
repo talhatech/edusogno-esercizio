@@ -4,28 +4,42 @@
     <meta charset="UTF-8">
     <title>Registrazione - Crea il tuo account</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
 </head>
 <body>
-    <div class="signup-container">
-        <h1 class="signup-title">Crea il tuo account</h1>
+    <header>
+        <img src="../assets/logo.jpg" alt="Edusogno" width="125" height="52"/>
+   </header>
+    <main>
+        <h1 class="title">Crea il tuo account</h1>
+        <div class="signup-container">
         <form class="signup-form" action="../public/register.php" method="POST">
-            <label for="nome">Inserisci il nome</label>
-            <input type="text" name="nome" id="nome" required placeholder="Mario">
+            <div class="form-group">
+                <label for="nome">Inserisci il nome</label>
+                <input type="text" name="nome" id="nome" required placeholder="Mario">
+            </div>
 
-            <label for="cognome">Inserisci il cognome</label>
-            <input type="text" name="cognome" id="cognome" required placeholder="Rossi">
+            <div class="form-group">
+                <label for="cognome">Inserisci il cognome</label>
+                <input type="text" name="cognome" id="cognome" required placeholder="Rossi">
+            </div>
 
-            <label for="email">Inserisci l'email</label>
-            <input type="email" name="email" d="email" required placeholder="name@example.com">
+            <div class="form-group">
+                <label for="email">Inserisci l'email</label>
+                <input type="email" name="email" d="email" required placeholder="name@example.com">
+            </div>
 
-            <label for="password">Inserisci la password</label>
-            <input type="password" name="password" id="password" required placeholder="Scrivila qui">
+            <div class="form-group password">
+                <label for="password">Inserisci la password</label>
+                <input type="password" name="password" id="password" required placeholder="Scrivila qui">
+            </div>
             
-            <button type="submit">REGISTRATI</button>
+            <button type="submit" class="event-button">REGISTRATI</button>
         </form>
         <div class="login-link">
             Hai già un account? <a href="login.php">Accedi</a>
         </div>
     </div>
+    </main>
 </body>
 </html>

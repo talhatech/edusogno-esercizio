@@ -57,7 +57,7 @@ class AuthController
         $user = $this->model->findUserByEmail($email);
         if ($user) {
             $token = $this->model->generatePasswordResetToken($email);
-             if (EmailService::sendPasswordResetEmail($email, $token)) {
+             if ((new EmailService())->sendPasswordResetEmail($email, $token)) {
                 echo "Password reset email sent successfully.";
             } else {
                 echo "Failed to send password reset email.";

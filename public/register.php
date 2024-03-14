@@ -14,12 +14,14 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
 // Initialize AuthController
 $authController = new AuthController();
 
+
+
 // Check if the form data is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['email']) && !empty($_POST['password'])) {
     // Attempt to login
     if ($authController->register()) {
         // Redirect to dashboard on successful login
-        header("Location: dashboard.php");
+        header("Location: login.php");
         exit();
     } else {
         // Redirect back to login on failure
